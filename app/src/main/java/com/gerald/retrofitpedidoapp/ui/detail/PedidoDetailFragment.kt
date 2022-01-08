@@ -1,4 +1,4 @@
-package com.gerald.retrofitpedidoapp.ui
+package com.gerald.retrofitpedidoapp.ui.detail
 
 import android.os.Bundle
 import android.util.Log
@@ -6,9 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.ArrayAdapter
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.LifecycleOwner
-import androidx.lifecycle.Observer
-import androidx.lifecycle.lifecycleScope
 import com.gerald.retrofitpedidoapp.R
 import com.gerald.retrofitpedidoapp.core.Resource
 import com.gerald.retrofitpedidoapp.data.remote.PedidoDataSource
@@ -18,7 +15,7 @@ import com.gerald.retrofitpedidoapp.domain.RetrofitClient
 import com.gerald.retrofitpedidoapp.presentation.PedidoViewModel
 import com.gerald.retrofitpedidoapp.presentation.PedidoViewModelFactory
 
-class PedidosFragment : Fragment(R.layout.fragment_pedidos) {
+class PedidoDetailFragment : Fragment(R.layout.fragment_pedidos) {
 
     private lateinit var binding: FragmentPedidosBinding
 

@@ -18,6 +18,16 @@ class PedidoViewModel(private val repo: PedidoRepository) : ViewModel() {
             emit(Resource.Failure(e))
         }
     }
+
+    fun getAllPedidos() = liveData (Dispatchers.IO){
+        emit(Resource.Loading())
+
+        try {
+            emit(Resource.Success(repo.getAllPedido()))
+        }catch (e : Exception){
+            emit(Resource.Failure(e))
+        }
+    }
 }
 
 class PedidoViewModelFactory(private val repo: PedidoRepository): ViewModelProvider.Factory{

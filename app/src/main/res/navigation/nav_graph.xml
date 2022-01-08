@@ -3,11 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/pedidosFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/pedidosFragment"
-        android:name="com.gerald.retrofitpedidoapp.ui.PedidosFragment"
+        android:name="com.gerald.retrofitpedidoapp.ui.detail.PedidoDetailFragment"
         android:label="fragment_pedidos"
         tools:layout="@layout/fragment_pedidos" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.gerald.retrofitpedidoapp.ui.login.LoginFragment"
+        android:label="fragment_login_fragment"
+        tools:layout="@layout/fragment_login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_pedidoOptionFragment"
+            app:destination="@id/pedidoOptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pedidosFragment2"
+        android:name="com.gerald.retrofitpedidoapp.ui.pedido.PedidosFragment"
+        android:label="fragment_pedidos2"
+        tools:layout="@layout/fragment_pedidos2" >
+        <action
+            android:id="@+id/action_pedidosFragment2_to_pedidosFragment"
+            app:destination="@id/pedidosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pedidoOptionFragment"
+        android:name="com.gerald.retrofitpedidoapp.ui.options.PedidoOptionFragment"
+        android:label="fragment_pedido_option"
+        tools:layout="@layout/fragment_pedido_option" >
+        <action
+            android:id="@+id/action_pedidoOptionFragment_to_pedidosFragment2"
+            app:destination="@id/pedidosFragment2" />
+    </fragment>
 </navigation>
