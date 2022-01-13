@@ -9,7 +9,11 @@
         android:id="@+id/pedidosFragment"
         android:name="com.gerald.retrofitpedidoapp.ui.detail.PedidoDetailFragment"
         android:label="fragment_pedidos"
-        tools:layout="@layout/fragment_pedidos" />
+        tools:layout="@layout/fragment_pedidos" >
+        <argument
+            android:name="idPed"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.gerald.retrofitpedidoapp.ui.login.LoginFragment"
@@ -17,7 +21,18 @@
         tools:layout="@layout/fragment_login_fragment" >
         <action
             android:id="@+id/action_loginFragment_to_pedidoOptionFragment"
-            app:destination="@id/pedidoOptionFragment" />
+            app:destination="@id/pedidoOptionFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/pedidosFragment2"
@@ -26,7 +41,11 @@
         tools:layout="@layout/fragment_pedidos2" >
         <action
             android:id="@+id/action_pedidosFragment2_to_pedidosFragment"
-            app:destination="@id/pedidosFragment" />
+            app:destination="@id/pedidosFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/pedidoOptionFragment"
@@ -35,6 +54,23 @@
         tools:layout="@layout/fragment_pedido_option" >
         <action
             android:id="@+id/action_pedidoOptionFragment_to_pedidosFragment2"
-            app:destination="@id/pedidosFragment2" />
+            app:destination="@id/pedidosFragment2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_pedidoOptionFragment_to_pedidoCreateFragment"
+            app:destination="@id/pedidoCreateFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.gerald.retrofitpedidoapp.ui.register.RegisterFragment"
+        android:label="fragment_register_fragment"
+        tools:layout="@layout/fragment_register_fragment" />
+    <fragment
+        android:id="@+id/pedidoCreateFragment"
+        android:name="com.gerald.retrofitpedidoapp.ui.create.PedidoCreateFragment"
+        android:label="fragment_pedido_create"
+        tools:layout="@layout/fragment_pedido_create" />
 </navigation>

@@ -7,6 +7,7 @@
     tools:context=".ui.pedido.PedidosFragment">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -37,8 +38,8 @@
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:layout_weight="3"
-            android:textSize="11sp"
-            android:text="@string/search"/>
+            android:text="@string/search"
+            android:textSize="11sp" />
 
     </LinearLayout>
 
@@ -58,5 +59,16 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="65dp" />
+
+    <ProgressBar
+        android:id="@+id/progess_peds"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/rv_ped"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

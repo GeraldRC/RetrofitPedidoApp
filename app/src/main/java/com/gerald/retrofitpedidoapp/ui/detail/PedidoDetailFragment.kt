@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.ArrayAdapter
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.navArgs
 import com.gerald.retrofitpedidoapp.R
 import com.gerald.retrofitpedidoapp.core.Resource
 import com.gerald.retrofitpedidoapp.data.remote.PedidoDataSource
@@ -18,6 +19,7 @@ import com.gerald.retrofitpedidoapp.presentation.PedidoViewModelFactory
 class PedidoDetailFragment : Fragment(R.layout.fragment_pedidos) {
 
     private lateinit var binding: FragmentPedidosBinding
+    private val args by navArgs<PedidoDetailFragmentArgs>()
 
     private val viewModel by viewModels<PedidoViewModel> {
         PedidoViewModelFactory(PedidoRepositoryImpl(PedidoDataSource(RetrofitClient.webService)))
@@ -31,7 +33,7 @@ class PedidoDetailFragment : Fragment(R.layout.fragment_pedidos) {
 
 
     private fun bindingPedido() {
-        viewModel.fetchPedido(1).observe(viewLifecycleOwner) {
+        viewModel.fetchPedido(args.idPed).observe(viewLifecycleOwner) {
             when (it) {
                 is Resource.Loading -> {
                     Log.d("Loading", "Loading....")

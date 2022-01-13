@@ -4,4 +4,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="search">Buscar</string>
     <string name="buscar">Buscar</string>
+    <string name="dificultad">Dificultad</string>
+    <string name="ingrese_n_pedido">Numero de Pedido</string>
+    <string name="add_ped">Agregar Pedido</string>
 </resources>

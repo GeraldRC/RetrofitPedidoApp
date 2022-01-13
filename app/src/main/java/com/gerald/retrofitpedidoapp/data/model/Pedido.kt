@@ -12,4 +12,3 @@ data class Pedido(
     val user: User
 )
 
-data class PedidoList(val results: List<Pedido> = listOf())
