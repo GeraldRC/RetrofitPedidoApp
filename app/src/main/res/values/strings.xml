@@ -7,4 +7,8 @@
     <string name="dificultad">Dificultad</string>
     <string name="ingrese_n_pedido">Numero de Pedido</string>
     <string name="add_ped">Agregar Pedido</string>
+    <string name="numero_de_pedido">Numero de Pedido</string>
+    <string name="articulos">Articulos</string>
+    <string name="articulos_entregados">Articulos Entregados</string>
+    <string name="detalle">Detalle</string>
 </resources>

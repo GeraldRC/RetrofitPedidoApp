@@ -18,16 +18,22 @@ class PedidoOptionFragment : Fragment(R.layout.fragment_pedido_option) {
         clickListeners()
     }
 
-    private fun clickListeners(){
+    private fun clickListeners() {
         binding.optPedidos.setOnClickListener {
             navigate(1)
         }
+        binding.optCreate.setOnClickListener {
+            navigate(2)
+        }
     }
 
-    private fun navigate(opt: Int){
-        when(opt){
+    private fun navigate(opt: Int) {
+        when (opt) {
             1 -> {
                 findNavController().navigate(R.id.action_pedidoOptionFragment_to_pedidosFragment2)
+            }
+            2 -> {
+                findNavController().navigate(R.id.action_pedidoOptionFragment_to_pedidoCreateFragment)
             }
         }
     }
